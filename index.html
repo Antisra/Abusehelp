@@ -99,6 +99,67 @@
       background: var(--red-light);
     }
 
+    /* ── FEATURED LINK BANNER ── */
+    .featured-banner {
+      max-width: 960px;
+      margin: 32px auto 0;
+      padding: 0 20px;
+    }
+
+    .featured-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: linear-gradient(135deg, rgba(107,26,139,0.35), rgba(192,57,43,0.25));
+      border: 1px solid var(--purple-light);
+      border-left: 5px solid var(--purple-light);
+      border-radius: 4px;
+      padding: 20px 24px;
+      text-decoration: none;
+      color: var(--white);
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .featured-link:hover {
+      background: linear-gradient(135deg, rgba(107,26,139,0.55), rgba(192,57,43,0.4));
+      transform: translateX(3px);
+    }
+
+    .featured-link .fl-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .featured-link .fl-text .fl-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--purple-light);
+      margin-bottom: 4px;
+    }
+
+    .featured-link .fl-text .fl-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .featured-link .fl-text .fl-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .featured-link .fl-arrow {
+      margin-left: auto;
+      font-size: 1.4rem;
+      color: var(--purple-light);
+      flex-shrink: 0;
+    }
+
     /* ── MAIN CONTAINER ── */
     .container {
       max-width: 960px;
@@ -260,6 +321,8 @@
       .card { padding: 24px 18px; }
       .manifesto { padding-left: 16px; }
       nav a { padding: 10px 14px; font-size: 0.78rem; }
+      .featured-link { flex-wrap: wrap; }
+      .fl-arrow { display: none; }
     }
   </style>
 </head>
@@ -272,6 +335,7 @@
   </header>
 
   <nav>
+    <a href="#bible">📖 Bible of the Yutes</a>
     <a href="#about">About</a>
     <a href="#videos">Videos</a>
     <a href="#links">Links</a>
@@ -280,6 +344,19 @@
     <a href="#merch">Merch</a>
     <a href="#support">Support</a>
   </nav>
+
+  <!-- FEATURED LINK: Bible of the Yutes -->
+  <div class="featured-banner" id="bible">
+    <a class="featured-link" href="https://antisra.github.io/TheBibleOfTheyutes/" target="_blank" rel="noopener">
+      <span class="fl-icon">📖</span>
+      <div class="fl-text">
+        <div class="fl-label">Featured Resource</div>
+        <div class="fl-title">The Bible of the Yutes</div>
+        <div class="fl-sub">Read it — antisra.github.io/TheBibleOfTheyutes</div>
+      </div>
+      <span class="fl-arrow">→</span>
+    </a>
+  </div>
 
   <div class="container">
 
@@ -371,6 +448,9 @@
         </a>
         <a class="link-item" href="https://www.tiktok.com/@antisra75?_r=1&_t=ZT-92wKuvIxC3b" target="_blank">
           <span class="icon">🎵</span> My TikTok
+        </a>
+        <a class="link-item" href="https://antisra.github.io/TheBibleOfTheyutes/" target="_blank">
+          <span class="icon">📖</span> The Bible of the Yutes
         </a>
       </div>
     </div>
@@ -465,9 +545,6 @@
     <p>© 2026 <strong>AntiSRA</strong> / REAL help &nbsp;•&nbsp; You are not alone.</p>
     <p style="margin-top: 10px;">📧 <a href="mailto:antimh@proton.me" style="color: var(--purple-light); text-decoration: none;">antimh@proton.me</a></p>
   </footer>
-
-</body>
-</html>
 
 </body>
 </html>
