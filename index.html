@@ -34,6 +34,69 @@
       line-height: 1.7;
     }
 
+    /* ── EMERGENCY BANNER ── */
+    .emergency-banner {
+      background: linear-gradient(90deg, #1a0a00, #2a1000, #1a0a00);
+      border-bottom: 3px solid #ff6b00;
+      padding: 0;
+    }
+
+    .emergency-banner a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 24px;
+      text-decoration: none;
+      color: var(--white);
+      max-width: 960px;
+      margin: 0 auto;
+      transition: opacity 0.2s;
+    }
+
+    .emergency-banner a:hover {
+      opacity: 0.85;
+    }
+
+    .emergency-banner .eb-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    .emergency-banner .eb-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ff6b00;
+      margin-bottom: 3px;
+    }
+
+    .emergency-banner .eb-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .emergency-banner .eb-sub {
+      font-size: 0.82rem;
+      color: #bbb;
+      margin-top: 2px;
+    }
+
+    .emergency-banner .eb-arrow {
+      margin-left: auto;
+      font-size: 1.3rem;
+      color: #ff6b00;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      .emergency-banner a { padding: 14px 16px; gap: 10px; }
+      .emergency-banner .eb-arrow { display: none; }
+    }
+
     /* ── HEADER ── */
     header {
       background: var(--dark);
@@ -327,6 +390,19 @@
   </style>
 </head>
 <body>
+
+  <!-- HOMELESS YOUTH RESOURCES BANNER — top of page -->
+  <div class="emergency-banner">
+    <a href="https://antisra.github.io/HomelessKidFleesources/" target="_blank" rel="noopener">
+      <span class="eb-icon">🏠</span>
+      <div>
+        <div class="eb-label">Resources</div>
+        <div class="eb-title">Homeless Youth Flee-sources</div>
+        <div class="eb-sub">Survival info, escape help &amp; resources for homeless kids</div>
+      </div>
+      <span class="eb-arrow">→</span>
+    </a>
+  </div>
 
   <header>
     <div class="eyebrow">Truth · Resistance · Survival</div>
